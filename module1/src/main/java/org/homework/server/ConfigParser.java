@@ -1,4 +1,4 @@
-package org.homework.server.util;
+package org.homework.server;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
@@ -14,6 +14,7 @@ public class ConfigParser {
     private ConfigParser() {
     }
 
+    //thread not save singleton Option 1
     public static ConfigParser getInstance() {
         if (instance == null) {
             instance = new ConfigParser();

@@ -1,3 +1,4 @@
 # Simple authorization server project
 
-- User access rights and access limitations the resources are stored in config file: resources/config.yml
+- User access rights and access limitations to resources are stored in config file: `resources/config.yml`
+- To check how code works please execute tests `SessionManagerTest.java`.

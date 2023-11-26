@@ -4,28 +4,24 @@ import org.homework.server.entity.AccessLevel;
 import org.homework.server.entity.ConfigData;
 import org.homework.server.entity.User;
 import org.homework.server.exception.InitializeServerException;
-import org.homework.server.util.ConfigParser;
 
 import java.util.Optional;
 
 public class ServerConfig {
-    private static ServerConfig instance;
     private static ConfigData configData;
 
-    private static final String configFilePath = "./src/main/resources/config.yml";
+    private static final String CONFIG_FILE_PATH = "./src/main/resources/config.yml";
 
+    //thread save singleton Option 3
     public static ServerConfig getInstance() {
-        if (instance == null) {
-            instance = new ServerConfig();
-        }
-        return instance;
+        return Singleton.INSTANCE;
     }
 
     private ServerConfig() {
         ConfigParser configParser = ConfigParser.getInstance();
-        configData = configParser.parseConfigData(configFilePath);
+        configData = configParser.parseConfigData(CONFIG_FILE_PATH);
 
-        if(configData.getUsersAccess().isEmpty()){
+        if (configData.getUsersAccess().isEmpty()) {
             throw new InitializeServerException();
         }
     }
@@ -36,5 +32,9 @@ public class ServerConfig {
 
     public Optional<AccessLevel> getResourceAccessLevel(String resource) {
         return Optional.ofNullable(configData.getResourcesAccess().get(resource));
+    }
+
+    private static class Singleton {
+        private static final ServerConfig INSTANCE = new ServerConfig();
     }
 }

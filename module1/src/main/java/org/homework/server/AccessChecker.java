@@ -13,9 +13,15 @@ public class AccessChecker {
     private AccessChecker() {
     }
 
+    //thread save singleton Option 2
     public static AccessChecker getInstance() {
         if (instance == null) {
-            instance = new AccessChecker();
+            synchronized (AccessChecker.class){
+                if(instance == null) {
+                    instance = new AccessChecker();  // if instance is still null, initialize
+                }
+                return instance;
+            }
         }
         return instance;
     }
