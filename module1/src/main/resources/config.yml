@@ -1,0 +1,8 @@
+usersAccess:
+  user1: L1
+  user2: L2
+  user3: L3
+resourcesAccess:
+  folder1: L1
+  folder2: L2
+  folder3: L3
