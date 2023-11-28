@@ -1,15 +1,14 @@
 package org.homework.server;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import java.util.stream.IntStream;
 import org.homework.server.entity.Session;
 import org.homework.server.entity.User;
 import org.homework.server.exception.InsufficientRightsException;
 import org.junit.jupiter.api.Test;
-
-import java.util.stream.IntStream;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.fail;
 
 class SessionManagerTest {
     private static final int THREADS_NUMBER = 20;
@@ -21,7 +20,7 @@ class SessionManagerTest {
         String resource = "folder1";
         Session actualResult = sut.createSession(new User(user), resource);
 
-        assertEquals(user, actualResult.getUserName());
+        assertEquals(user, actualResult.userName());
     }
 
     @Test
@@ -29,7 +28,8 @@ class SessionManagerTest {
         String user = "userN";
         String resource = "folder1";
 
-        assertThrows(InsufficientRightsException.class, () -> sut.createSession(new User(user), resource));
+        assertThrows(InsufficientRightsException.class,
+                () -> sut.createSession(new User(user), resource));
     }
 
     @Test
@@ -37,7 +37,8 @@ class SessionManagerTest {
         String user = "user1";
         String resource = "folderN";
 
-        assertThrows(InsufficientRightsException.class, () -> sut.createSession(new User(user), resource));
+        assertThrows(InsufficientRightsException.class,
+                () -> sut.createSession(new User(user), resource));
     }
 
     @Test
@@ -45,7 +46,8 @@ class SessionManagerTest {
         String user = "user1";
         String resource = "folder2";
 
-        assertThrows(InsufficientRightsException.class, () -> sut.createSession(new User(user), resource));
+        assertThrows(InsufficientRightsException.class,
+                () -> sut.createSession(new User(user), resource));
     }
 
     @Test
@@ -56,7 +58,7 @@ class SessionManagerTest {
         IntStream.range(0, THREADS_NUMBER).parallel().forEach(threadId -> {
             try {
                 Session actualResult = sut.createSession(new User(user), resource);
-                assertEquals(user, actualResult.getUserName());
+                assertEquals(user, actualResult.userName());
             } catch (InsufficientRightsException e) {
                 fail("There was unexpected exception generated during test run " + e.getMessage());
             }
