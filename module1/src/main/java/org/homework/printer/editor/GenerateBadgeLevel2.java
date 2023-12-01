@@ -1,16 +1,17 @@
 package org.homework.printer.editor;
 
+import org.homework.printer.observer.Observer;
 import org.homework.server.entity.AccessLevel;
 
 public class GenerateBadgeLevel2 extends EditStep {
-    public GenerateBadgeLevel2(EditStep next) {
-        super(next);
+    public GenerateBadgeLevel2(Observer observer, EditStep next) {
+        super(observer, next);
     }
 
     public String apply(EditInput input) {
         if (isApplicable(input)) {
             input.setResult(editMessage(input));
-            return new GenerateMonthEmployeeBadge(null).apply(input);
+            return new GenerateMonthEmployeeBadge(observer, null).applyAndNotify(input);
         }
         return applyNext(input);
     }

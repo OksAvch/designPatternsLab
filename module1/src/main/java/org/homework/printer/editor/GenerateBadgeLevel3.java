@@ -1,10 +1,11 @@
 package org.homework.printer.editor;
 
+import org.homework.printer.observer.Observer;
 import org.homework.server.entity.AccessLevel;
 
 public class GenerateBadgeLevel3 extends EditStep {
-    public GenerateBadgeLevel3(EditStep next) {
-        super(next);
+    public GenerateBadgeLevel3(Observer observer, EditStep next) {
+        super(observer, next);
     }
 
     public String apply(EditInput input) {

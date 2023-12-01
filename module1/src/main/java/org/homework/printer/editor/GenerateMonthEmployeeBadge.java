@@ -1,8 +1,10 @@
 package org.homework.printer.editor;
 
+import org.homework.printer.observer.Observer;
+
 public class GenerateMonthEmployeeBadge extends EditStep {
-    public GenerateMonthEmployeeBadge(EditStep next) {
-        super(next);
+    public GenerateMonthEmployeeBadge(Observer observer, EditStep next) {
+        super(observer, next);
     }
 
     public String apply(EditInput input) {
