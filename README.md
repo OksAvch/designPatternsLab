@@ -16,10 +16,16 @@ The following patterns have been implemented within specific classes of the proj
     - Located at: `org.homework.printer.editor.EditStep`
     - The `Strategy` pattern allows a class behavior or its algorithm to be selected at runtime. This pattern is used to implement various editing steps in a flexible way.
 
-- **Singleton Pattern**
-    - Located at: `org.homework.server.ServerConfig`
-    - The `Singleton` pattern ensures that a class has only one instance and provides a global point of access to it. This is used for server configuration management.
-
 - **Visitor Pattern**
     - Located at: `org.homework.Visitor`
     - The `Visitor` pattern allows you to define new operations without changing the classes of the elements on which it operates.
+
+### Creational Patterns
+- **Abstract factory Pattern**
+  - Located at: `org.homework.factory.PastryFactory`
+  - The `Abstract factory` pattern allows you to produce families of related objects without specifying their concrete classes.
+
+- **Singleton Pattern**
+  - Located at: `org.homework.server.ServerConfig`
+  - The `Singleton` pattern ensures that a class has only one instance and provides a global point of access to it. This is used for server configuration management.
+
