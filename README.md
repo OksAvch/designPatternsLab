@@ -32,3 +32,8 @@ The following patterns have been implemented within specific classes of the proj
 - **Builder Pattern**
   - Located at: `org.homework.builder.Bakery`
   - The `Builder` pattern lets you construct complex objects step by step. 
+  - 
+- **Factory Method Pattern**
+  - Located at: `org.homework.factorymethod.Bakery`
+  - The `Factory Method` pattern lets you construct complex objects step by step. 
+
