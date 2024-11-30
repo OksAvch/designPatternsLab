@@ -29,3 +29,6 @@ The following patterns have been implemented within specific classes of the proj
   - Located at: `org.homework.server.ServerConfig`
   - The `Singleton` pattern ensures that a class has only one instance and provides a global point of access to it. This is used for server configuration management.
 
+- **Builder Pattern**
+  - Located at: `org.homework.builder.Bakery`
+  - The `Builder` pattern lets you construct complex objects step by step. 
