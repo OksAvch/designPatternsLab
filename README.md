@@ -32,12 +32,16 @@ The following patterns have been implemented within specific classes of the proj
 - **Builder Pattern**
   - Located at: `org.homework.builder.Bakery`
   - The `Builder` pattern lets you construct complex objects step by step. 
-  - 
+ 
 - **Factory Method Pattern**
   - Located at: `org.homework.factorymethod.Bakery`
   - The `Factory Method` pattern lets you construct complex objects step by step. 
-  - 
+
 - **Prototype Pattern**
   - Located at: `org.homework.factorymethod.Bakery`
   - The `Prototype` pattern lets you copy existing objects without making your code dependent on their classes.
 
+### Structural Patterns
+- **Adapter Pattern**
+  - Located at: `org.homework.adapter.Bakery`
+  - The `Adapter` pattern allows objects with incompatible interfaces to collaborate..
