@@ -45,8 +45,12 @@ The following patterns have been implemented within specific classes of the proj
 - **Adapter Pattern**
   - Located at: `org.homework.adapter.Bakery`
   - The `Adapter` pattern allows objects with incompatible interfaces to collaborate.
-  - 
+
 - **Bridge Pattern**
   - Located at: `org.homework.bridge`
   - The `Bridge` pattern lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other.
   - Based on object composition. One of the dimensions should be extracted into a separate class hierarchy, so that the original classes will reference an object of the new hierarchy, instead of having all of its state and behaviors within one class.
+
+- **Composite Pattern**
+  - Located at: `org.homework.composite`
+  - The `Composite` pattern lets you compose objects into tree structures and then work with these structures as if they were individual objects.

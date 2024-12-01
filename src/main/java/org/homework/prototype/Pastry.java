@@ -16,4 +16,7 @@ public abstract class Pastry implements Prototype {
         this.filling = source.filling;
         this.decoration = source.decoration;
     }
+
+    @Override
+    public abstract Pastry clone();
 }
