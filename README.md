@@ -54,3 +54,8 @@ The following patterns have been implemented within specific classes of the proj
 - **Composite Pattern**
   - Located at: `org.homework.composite`
   - The `Composite` pattern lets you compose objects into tree structures and then work with these structures as if they were individual objects.
+
+- **Decorator Pattern**
+  - Located at: `org.homework.composite`
+  - The `Decorator` pattern lets you compose objects into tree structures and then work with these structures as if they were individual objects.
+  - When: you need to be able to assign extra behaviors to objects at runtime without changing the code that uses these objects and object structure.
