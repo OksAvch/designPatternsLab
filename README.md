@@ -67,7 +67,12 @@ The following patterns have been implemented within specific classes of the proj
 
 - **Proxy Pattern**
   - Located at: `org.homework.proxy`
-  - The `Proxy' pattern controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.
+  - The `Proxy` pattern controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.
   - When: 
     - the app launches, you can delay the object’s initialization to a time when it’s really needed;
     - it is necessary to perform some actions before passing request to the service object;
+
+- **Facade Pattern**
+  - Located at: `org.homework.facade`
+  - The `Facade` pattern provides a simplified interface to a library, a framework, or any other complex set of classes.
+  - When: when you need to have a limited but straightforward interface to a complex subsystem.
