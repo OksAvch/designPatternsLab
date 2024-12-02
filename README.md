@@ -64,3 +64,10 @@ The following patterns have been implemented within specific classes of the proj
   - Located at: `org.homework.flyweight`
   - The `Flyweight` pattern lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all of the data in each object.
   - When: your program must support a huge number of objects which barely fit into available RAM.
+
+- **Proxy Pattern**
+  - Located at: `org.homework.proxy`
+  - The `Proxy' pattern controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.
+  - When: 
+    - the app launches, you can delay the object’s initialization to a time when it’s really needed;
+    - it is necessary to perform some actions before passing request to the service object;
