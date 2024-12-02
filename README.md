@@ -59,3 +59,8 @@ The following patterns have been implemented within specific classes of the proj
   - Located at: `org.homework.composite`
   - The `Decorator` pattern lets you compose objects into tree structures and then work with these structures as if they were individual objects.
   - When: you need to be able to assign extra behaviors to objects at runtime without changing the code that uses these objects and object structure.
+
+- **Flyweight Pattern**
+  - Located at: `org.homework.flyweight`
+  - The `Flyweight` pattern lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all of the data in each object.
+  - When: your program must support a huge number of objects which barely fit into available RAM.
