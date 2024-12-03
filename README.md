@@ -3,7 +3,7 @@ This project is created to explore and practice some of the GoF design patterns 
 The following patterns have been implemented within specific classes of the project:
 
 
-## Implemented Design Patterns
+## Behavioral Patterns
 - **State Pattern**
     - Located at: `org.homework.player.state.PlayState`
     - The `State` pattern allows an object to alter its behavior when its internal state changes. This pattern is used to manage player state transitions.
@@ -19,6 +19,14 @@ The following patterns have been implemented within specific classes of the proj
 - **Visitor Pattern**
     - Located at: `org.homework.Visitor`
     - The `Visitor` pattern allows you to define new operations without changing the classes of the elements on which it operates.
+  
+- **Chain of Responsibility Pattern**
+    - Located at: `org.homework.chain`
+    - The `Chain of Responsibility` pattern lets you pass requests along a chain of handlers. Upon receiving a request, each handler will either process the request or pass it to the next handler in the chain.
+    - When: 
+      - your program is expected to process different kinds of requests in various ways, but the exact types of requests and their sequences are unknown beforehand.
+      - it’s essential to execute several handlers in a particular order.
+      - the set of handlers and their order are supposed to change at runtime.
 
 ### Creational Patterns
 - **Abstract factory Pattern**
@@ -38,7 +46,7 @@ The following patterns have been implemented within specific classes of the proj
   - The `Factory Method` pattern lets you construct complex objects step by step. 
 
 - **Prototype Pattern**
-  - Located at: `org.homework.factorymethod.Bakery`
+  - Located at: `org.homework.prototype.Bakery`
   - The `Prototype` pattern lets you copy existing objects without making your code dependent on their classes.
 
 ### Structural Patterns
@@ -75,4 +83,4 @@ The following patterns have been implemented within specific classes of the proj
 - **Facade Pattern**
   - Located at: `org.homework.facade`
   - The `Facade` pattern provides a simplified interface to a library, a framework, or any other complex set of classes.
-  - When: when you need to have a limited but straightforward interface to a complex subsystem.
+  - When: you need to have a limited but straightforward interface to a complex subsystem.
