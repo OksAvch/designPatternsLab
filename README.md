@@ -34,6 +34,13 @@ The following patterns have been implemented within specific classes of the proj
   - When:
     - you want to parametrize objects with operations.
     - you want to queue operations, schedule their execution, or execute them remotely; or to implement reversible operations.
+  
+- **Iterator Pattern**
+  - Located at: `org.homework.iterator`
+  - The `Iterator` pattern allows you to traverse elements of a collection without exposing its underlying representation (list, stack, tree, etc.).
+  - When: 
+    - your collection has a complex data structure under the hood, but you want to hide its complexity from clients.
+    - you want your code to be able to traverse different data structures or when types of these structures are unknown beforehand.
 
 ### Creational Patterns
 - **Abstract factory Pattern**
