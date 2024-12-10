@@ -28,6 +28,13 @@ The following patterns have been implemented within specific classes of the proj
       - it’s essential to execute several handlers in a particular order.
       - the set of handlers and their order are supposed to change at runtime.
 
+- **Command Pattern**
+  - Located at: `org.homework.command`
+  - The `Command` pattern lets you pass requests along a chain of handlers.
+  - When:
+    - you want to parametrize objects with operations.
+    - you want to queue operations, schedule their execution, or execute them remotely; or to implement reversible operations.
+
 ### Creational Patterns
 - **Abstract factory Pattern**
   - Located at: `org.homework.factory.PastryFactory`
