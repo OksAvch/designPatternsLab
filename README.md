@@ -5,28 +5,41 @@ The following patterns have been implemented within specific classes of the proj
 
 ## Behavioral Patterns
 - **State Pattern**
-    - Located at: `org.homework.player.state.PlayState`
-    - The `State` pattern allows an object to alter its behavior when its internal state changes. This pattern is used to manage player state transitions.
+  - Located at: `org.homework.player.state.PlayState`
+  - The `State` pattern allows an object to alter its behavior when its internal state changes. This pattern is used to manage player state transitions.
+  - When:
+    - you have an object that behaves differently depending on its current state, the number of states is enormous, and the state-specific code changes frequently.
+    - you have a class polluted with massive conditionals that alter how the class behaves according to the current values of the class’s fields.
+    - you have a lot of duplicate code across similar states and transitions of a condition-based state machine.
 
 - **Observer Pattern**
-    - Located at: `org.homework.printer.Observer`
-    - The `Observer` pattern defines a one-to-many relationship between objects, where changes in one object automatically notify and update dependent objects.
+  - Located at: `org.homework.printer.Observer`
+  - The `Observer` pattern defines a one-to-many relationship between objects, where changes in one object automatically notify and update dependent objects.
+  - When:
+    - changes to the state of one object may require changing other objects, and the actual set of objects is unknown beforehand or changes dynamically.
+    - some objects in your app must observe others, but only for a limited time or in specific cases.
 
 - **Strategy Pattern**
-    - Located at: `org.homework.printer.editor.EditStep`
-    - The `Strategy` pattern allows a class behavior or its algorithm to be selected at runtime. This pattern is used to implement various editing steps in a flexible way.
+  - Located at: `org.homework.printer.editor.EditStep`
+  - The `Strategy` pattern allows a class behavior or its algorithm to be selected at runtime. This pattern is used to implement various editing steps in a flexible way.
+  - When:
+    - want to use different variants of an algorithm within an object and be able to switch from one algorithm to another during runtime.
+    - your class has a massive conditional statement that switches between different variants of the same algorithm.
 
 - **Visitor Pattern**
-    - Located at: `org.homework.Visitor`
-    - The `Visitor` pattern allows you to define new operations without changing the classes of the elements on which it operates.
+  - Located at: `org.homework.Visitor`
+  - The `Visitor` pattern allows you to define new operations without changing the classes of the elements on which it operates.
+  - When: 
+    - need to perform an operation on all elements of a complex object structure (for example, an object tree).
+    - a behavior makes sense only in some classes of a class hierarchy, but not in others.
   
 - **Chain of Responsibility Pattern**
-    - Located at: `org.homework.chain`
-    - The `Chain of Responsibility` pattern lets you pass requests along a chain of handlers. Upon receiving a request, each handler will either process the request or pass it to the next handler in the chain.
-    - When: 
-      - your program is expected to process different kinds of requests in various ways, but the exact types of requests and their sequences are unknown beforehand.
-      - it’s essential to execute several handlers in a particular order.
-      - the set of handlers and their order are supposed to change at runtime.
+  - Located at: `org.homework.chain`
+  - The `Chain of Responsibility` pattern lets you pass requests along a chain of handlers. Upon receiving a request, each handler will either process the request or pass it to the next handler in the chain.
+  - When: 
+    - your program is expected to process different kinds of requests in various ways, but the exact types of requests and their sequences are unknown beforehand.
+    - it’s essential to execute several handlers in a particular order.
+    - the set of handlers and their order are supposed to change at runtime.
 
 - **Command Pattern**
   - Located at: `org.homework.command`
@@ -41,6 +54,19 @@ The following patterns have been implemented within specific classes of the proj
   - When: 
     - your collection has a complex data structure under the hood, but you want to hide its complexity from clients.
     - you want your code to be able to traverse different data structures or when types of these structures are unknown beforehand.
+
+- **Memento Pattern**
+  - Located at: `org.homework.printer.observer.EditInputMemento`
+  - The `Mediator` pattern allows you to save and restore the previous state of an object without revealing the details of its implementation.
+  - When: you want to produce snapshots of the object’s state to be able to restore a previous state of the object (applicable for Undo opereation and to Transactions roll back).
+
+- **Template Method Pattern**
+  - Located at: `org.homework.Template Method`
+  - The `Template Method` pattern allows you to
+
+- **Mediator Pattern**
+  - Located at: `org.homework.Mediator`
+  - The `Mediator` pattern allows you to
 
 ### Creational Patterns
 - **Abstract factory Pattern**
