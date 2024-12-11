@@ -61,8 +61,9 @@ The following patterns have been implemented within specific classes of the proj
   - When: you want to produce snapshots of the object’s state to be able to restore a previous state of the object (applicable for Undo opereation and to Transactions roll back).
 
 - **Template Method Pattern**
-  - Located at: `org.homework.Template Method`
-  - The `Template Method` pattern allows you to
+  - Located at: `org.homework.templatemethod`
+  - The `Template Method` pattern defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
+  - When: you want to let clients extend only particular steps of an algorithm, but not the whole algorithm or its structure.
 
 - **Mediator Pattern**
   - Located at: `org.homework.Mediator`
