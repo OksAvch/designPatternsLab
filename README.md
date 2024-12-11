@@ -67,7 +67,8 @@ The following patterns have been implemented within specific classes of the proj
 
 - **Mediator Pattern**
   - Located at: `org.homework.Mediator`
-  - The `Mediator` pattern allows you to
+  - The `Mediator` pattern allows you to extract all the relationships between classes into a separate class, isolating any changes to a specific component from the rest of the components.
+  - When: you need to extract all the relationships between classes into a separate class, isolating any changes to a specific component from the rest of the components.
 
 ### Creational Patterns
 - **Abstract factory Pattern**
